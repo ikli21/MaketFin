@@ -9,7 +9,7 @@
     android:layout_alignParentTop="true"
     android:clipToOutline="true"
     android:background="@drawable/shapebackgr"
-    app:layout_constraintBottom_toTopOf="@+id/some_id"
+    app:layout_constraintBottom_toTopOf="@+id/list_id"
     app:layout_constraintStart_toStartOf="parent"
 >
 
