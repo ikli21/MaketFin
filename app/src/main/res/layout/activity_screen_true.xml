@@ -28,7 +28,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/shapebackgr"
-        android:clipToOutline="true"
+
         app:layout_constraintBottom_toTopOf="@+id/lowerpanel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/layout_animal"
+            layout="@layout/category_item"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,10 +103,19 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@android:color/white"
-        android:clipToOutline="true"
+
         app:layout_constraintBottom_toTopOf="@+id/lowerpanel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swine_id" />
+        app:layout_constraintTop_toBottomOf="@+id/swine_id" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_meat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
         <View
             android:id="@+id/lowerpanel"
             android:layout_width="match_parent"
