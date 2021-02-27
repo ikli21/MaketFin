@@ -20,46 +20,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <View
+        android:id="@+id/viewSwinBot"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/swine_id"
+        app:layout_constraintEnd_toEndOf="@+id/swine_id"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        android:id="@+id/swine_id"
-        android:layout_width="302dp"
-        android:layout_height="357dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/shapebackgr"
-
-        app:layout_constraintBottom_toTopOf="@+id/lowerpanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:showIn="@layout/activity_screen_true">
-
-        <include
-            android:id="@+id/include"
-            layout="@layout/category_item"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/hitofsell"
-            android:layout_width="250dp"
-            android:layout_height="47dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
-            android:text="Хит продаж"
-            android:textAppearance="@style/sus_oy"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/include" />
-
-        <!--
-          Font family: Alegreya
-          Line height: 49sp
-        -->
-        <!-- styles.xml -->
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
 <!--        android:id="@+id/some_id"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="200dp"-->
@@ -96,35 +65,126 @@
 <!--            </item>-->
 
 <!--        </style>-->
+
+    <View
+        android:id="@+id/viewSwinBot2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/swine_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewSwinBot" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSwinBot2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swine_id"
+        app:layout_constraintTop_toTopOf="@+id/swine_id">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#F48D86"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pilula" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/list_id"
-        android:layout_width="411dp"
-        android:layout_height="150dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="false"
         android:layout_alignParentTop="true"
-        android:background="@android:color/white"
 
+        android:background="@drawable/botback"
+        android:paddingTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/lowerpanel"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swine_id" >
+        app:layout_constraintTop_toTopOf="@+id/viewSwinBot">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_meat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:clipToPadding="false"
             android:orientation="horizontal"
+            android:paddingStart="32dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_category" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-        <View
-            android:id="@+id/lowerpanel"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
 
-            android:background="@drawable/shapelower"
+    <View
+        android:id="@+id/lowerpanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="@drawable/shapelower"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/swine_id"
+        android:layout_width="302dp"
+        android:layout_height="357dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shapebackgr"
+        app:layout_constraintBottom_toTopOf="@+id/list_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt"
+        tools:showIn="@layout/activity_screen_true">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_category"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/hitofsell"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Хит продаж"
+            android:textAppearance="@style/sus_oy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+        <!--
+          Font family: Alegreya
+          Line height: 49sp
+        -->
+        <!-- styles.xml -->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/vt"

@@ -11,4 +11,5 @@ public class Category {
     public String URLPhoto;
 
     public String Title;
+    public String Description;
 }

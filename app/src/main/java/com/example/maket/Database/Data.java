@@ -20,7 +20,7 @@ public class Data {
     public final static String ID = "id";
     public final static String ID_PRODUCT = "id_product";
     public final static String TITLE="title";
-    AppDataBase db;
+    public AppDataBase db;
     RequestManager glide;
     public Data(Context context) {
         db = Room.databaseBuilder(context,
@@ -30,7 +30,7 @@ public class Data {
     public  void loadImage(String url, ImageView imageView)
     {
         glide.load(url)
-                .placeholder(R.drawable.ic_launcher_foreground)
+
                 .into(imageView);
     }
 

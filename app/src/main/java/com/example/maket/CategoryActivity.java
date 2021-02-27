@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.maket.Database.Data;
+import com.example.maket.Database.Entities.Category;
 import com.example.maket.Database.Entities.Product;
-import com.example.maket.databinding.CategoryItemBinding;
 import com.example.maket.databinding.ItemProductBinding;
 
 import java.util.ArrayList;
@@ -43,6 +43,16 @@ public class CategoryActivity extends AppCompatActivity {
         data.getCurrentCategoryProduct(id).observe(CategoryActivity.this, new Observer<List<Product>>() {
             @Override
             public void onChanged(List<Product> productsValue) {
+                if(productsValue==null||productsValue.size()==0){
+
+                    Product product = new Product();
+                    product.TitleProduct = "Бычьи яйца";
+                    product.Price = 2000.00;
+                    product.ShortName = "Яйца";
+                    product.Description="Вкуснейшие яца ммм";
+                    product.URLPhotoProduct = "https://st.depositphotos.com/1017994/2602/v/600/depositphotos_26026285-stock-illustration-illustration-of-a-cow-head.jpg";
+                    data.db.productDao().insert(product);
+                }
                 products=productsValue;
                 adapter.notifyDataSetChanged();
             }
@@ -68,7 +78,7 @@ public class CategoryActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             final Product product = products.get(position);
 
-            holder.binding.productnameTV.setText(product.TitleProduct);
+            holder.binding.productnameTV.setText(product.ShortName);
             holder.binding.productpriceTV.setText(String.valueOf(product.Price));
             data.loadImage(product.URLPhotoProduct,holder.binding.productIV);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
