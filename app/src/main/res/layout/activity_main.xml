@@ -91,6 +91,7 @@
         android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="openTrue"
         app:layout_constraintStart_toStartOf="parent">
 
     </Button>
