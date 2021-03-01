@@ -69,7 +69,7 @@ public class TrueScreen extends AppCompatActivity {
 
             holder.binding.titleView.setText(category.Title);
             data.loadImage(category.URLPhoto, holder.binding.iteminc.categoryIV);
-
+            holder.binding.descriptionView.setText(category.Description);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -58,6 +58,11 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
     }
+    public void GoToAdd(View view){
+        Intent intent = new Intent(CategoryActivity.this, AddEditActivity.class);
+//        intent.putExtra(Data.ID,id);
+        startActivity(intent);
+    }
 
 
 //    public void AddProduct(View view) {

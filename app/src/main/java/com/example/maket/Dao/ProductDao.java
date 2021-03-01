@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.maket.Database.Entities.Product;
 
@@ -24,6 +25,8 @@ public interface ProductDao
 
     @Delete
     void delete (Product product);
+    @Update
+    void update (Product product);
 
 
 }
