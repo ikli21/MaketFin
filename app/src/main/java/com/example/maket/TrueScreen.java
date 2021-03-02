@@ -44,7 +44,7 @@ public class TrueScreen extends AppCompatActivity {
 
                     Category category = new Category();
                     category.Title = "Говядина";
-                    category.URLPhoto = "https://st.depositphotos.com/1017994/2602/v/600/depositphotos_26026285-stock-illustration-illustration-of-a-cow-head.jpg";
+                    category.URLPhoto = "https://avatanplus.com/files/resources/original/5d83abce7effb16d4a571eb8.png";
                     data.db.categoryDao().insert(category);
                 }
                 TrueScreen.this.categories = categories;

@@ -46,11 +46,11 @@ public class CategoryActivity extends AppCompatActivity {
                 if(productsValue==null||productsValue.size()==0){
 
                     Product product = new Product();
-                    product.TitleProduct = "Бычьи яйца";
+                    product.TitleProduct = "Бифштекс говядина";
                     product.Price = 2000.00;
-                    product.ShortName = "Яйца";
-                    product.Description="Вкуснейшие яца ммм";
-                    product.URLPhotoProduct = "https://st.depositphotos.com/1017994/2602/v/600/depositphotos_26026285-stock-illustration-illustration-of-a-cow-head.jpg";
+                    product.ShortName = "Бифштекс";
+                    product.Description="Классический бифштекс, прямиком с альпийских полей";
+                    product.URLPhotoProduct = "https://avatanplus.com/files/resources/original/572627d5950691546d0b9a6a.png";
                     data.db.productDao().insert(product);
                 }
                 products=productsValue;
