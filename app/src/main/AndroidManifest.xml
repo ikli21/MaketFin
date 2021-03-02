@@ -14,8 +14,8 @@
         <activity android:name=".AddEditActivity"></activity>
         <activity android:name=".ProductActivity" />
         <activity android:name=".CategoryActivity" />
-        <activity android:name=".TrueScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".TrueScreen" android:theme="@style/AppTheme.BlackTop"/>
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.BlueTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
